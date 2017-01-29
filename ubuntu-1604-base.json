@@ -11,11 +11,12 @@
     "iso_checksum": "b8b172cbdf04f5ff8adc8c2c1b4007ccf66f00fc6a324a6da6eba67de71746f6",
     "iso_checksum_type": "sha256",
 
-    "ssh_username": "nullgrid",
-    "ssh_password": "nullgrid",
+    "ssh_username": "ubuntu",
+    "ssh_password": "ubuntu",
     "ssh_timeout": "15m",
 
     "disk_type_id": "thin",
+    "disk_size": "10000",
 
     "floppy_files": [
       "preseed/ubuntu.cfg"
@@ -37,7 +38,7 @@
       "initrd=/install/initrd.gz -- <enter>"
     ],
 
-    "shutdown_command": "echo 'shutdown -P now' > shutdown.sh; echo 'nullgrid'|sudo -S sh 'shutdown.sh'",
+    "shutdown_command": "echo 'shutdown -P now' > shutdown.sh; echo 'ubuntu'|sudo -S sh 'shutdown.sh'",
 
     "remote_type": "esx5",
     "remote_host": "{{user `esxi_host`}}",
@@ -58,7 +59,7 @@
         "scripts/open-vm-tools.sh"
       ],
 
-      "execute_command": "echo 'nullgrid' | {{ .Vars }} sudo -E -S bash '{{ .Path }}'"
+      "execute_command": "echo 'ubuntu' | {{ .Vars }} sudo -E -S bash '{{ .Path }}'"
     }
   ]
 }

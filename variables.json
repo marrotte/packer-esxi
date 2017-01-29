@@ -1,6 +1,6 @@
 {
-  "esxi_host": "",
-  "esxi_datastore": "primary",
-  "esxi_username": "",
-  "esxi_password": ""
+  "esxi_host": "192.168.38.59",
+  "esxi_datastore": "datastore1",
+  "esxi_username": "root",
+  "esxi_password": "password"
 }
